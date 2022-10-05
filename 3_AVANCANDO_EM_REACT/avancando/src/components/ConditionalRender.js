@@ -21,7 +21,7 @@ const ConditionalRender = () => {
             <p>Nome não encontrado!</p>
           </div>
         )}
-        <button onClick={() => setName("Moana")}>Clique aqui1</button>
+        <button onClick={() => setName("José")}>Clique aqui!</button>
     </div>
   )
 }
