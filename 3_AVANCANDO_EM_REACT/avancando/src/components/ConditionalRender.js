@@ -8,7 +8,7 @@ const ConditionalRender = () => {
 
   return (
     <div>
-        <h1>Isso será exibido?    </h1>
+        <h1>Isso será exibido?</h1>
         {x && <p>Se x for true, sim!</p>}
         {!x && <p>Agora é falso</p>}
         <h1>If ternário</h1>
