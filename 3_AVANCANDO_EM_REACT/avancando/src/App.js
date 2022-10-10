@@ -13,6 +13,7 @@ import Container from './components/Container';
 import ExecuteFunction from './components/ExecuteFunction';
 import Message from './components/Message';
 import ChangeMessageState from './components/ChangeMessageState';
+import UserDetails from './components/UserDetails';
 
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
     {id: 1, brand:"Ferrari", color:"Amarela", newCar: true, km:0},
     {id: 2, brand:"KIA", color:"Azul", newCar: false, km:31323213},
     {id: 3, brand:"Hyundai", color:"Preto", newCar: false, km:1234}
-  ]
+  ];
 
 
   function showMessage(){
@@ -36,6 +37,13 @@ function App() {
   const handleMessage = (msg) => {
     setMessage(msg);
   }
+
+  const users = [
+    {id:1, name: "Everaldo", job: "Programmer", age: 25},
+    {id:2, name: "Débora", job: "Comerciante", age: 53},
+    {id:3, name: "Baruch", job: "Analyst", age: 24},
+    {id:4, name: "Xeleleu", job: "Vagaba", age: 15},
+  ];
 
   return (
     <div className="App">
@@ -78,6 +86,15 @@ function App() {
       {/* state lift  */}
       <Message msg={message}/>
       <ChangeMessageState handleMessage={handleMessage} />
+      {/* desafio */}
+      {users.map((user) =>(
+        <UserDetails 
+          key={user.id} 
+          name={user.name}
+          job={user.job}
+          age={user.age}
+        />
+      ))}
     </div>
   ); 
 }
